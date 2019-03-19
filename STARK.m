@@ -1,4 +1,4 @@
-function [D_STARK, X_STARK, Reconst_error] = STARK(Y, Permutation_vectors, D_init, param,paramSC)
+function [D_STARK, X_STARK, Reconst_error] = STARK(Y, Permutation_vectors, D_init, paramDL, paramSC)
 
 % Y: observation matrix
 
@@ -15,15 +15,13 @@ function [D_STARK, X_STARK, Reconst_error] = STARK(Y, Permutation_vectors, D_ini
 
 %% parameters
 
-Dictionary_sizes=param.DicSizes;
-
-Max_Iter_DL=param.MaxIterDL;
-tol_DL=param.TolDL;
-
-MaxIter_ADMM=param.MaxIterADMM;
-tol_ADMM=param.TolADMM;
-gammaADMM=param.gammaADMM;
-lambdaADMM=param.lambdaADMM;
+Dictionary_sizes=paramDL.DicSizes;
+Max_Iter_DL=paramDL.MaxIterDL;
+tol_DL=paramDL.TolDL;
+MaxIter_ADMM=paramDL.MaxIterADMM;
+tol_ADMM=paramDL.TolADMM;
+gammaADMM=paramDL.gammaADMM;
+lambdaADMM=paramDL.lambdaADMM;
 
 
 for  iter = 1:Max_Iter_DL
