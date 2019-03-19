@@ -1,3 +1,7 @@
+
+%%% Mohsen Ghassemi
+%%% The demo of the low-separation-rank algorithm STARK on the "house" image.
+
 % Y: observation matrix
 % D: dictionary
 % X: coefficient matrix
